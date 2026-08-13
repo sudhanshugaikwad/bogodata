@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "1 Unit",
+    "discount": "10% Off",
+    "standaedPrice": "Standaed Price",
+    "prise1": "$ 10.00 USD",
+    "prise2": "$ 24.00 USD",
+    "size": "Size",
+    "Color": "Colour"
+  },
+  {
+    "id": "2",
+    "name": "2 Unit",
+    "discount": "20% Off",
+    "prise1": "$ 18.00 USD",
+    "prise2": "$ 24.00 USD"
+  },
+  {
+    "id": "3",
+    "name": "3 Unit",
+    "discount": "30% Off",
+    "prise1": "$ 24.00 USD",
+    "prise2": "$ 24.00 USD"
+  }
+]
