@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #f4f4f4;
+  font-family: "Inter", sans-serif;
+  color: #111;
+}
+
+.main {
+  width: min(92vw, 450px);
+  margin: 50px auto;
+  padding: 30px 18px 18px;
+  background: #fcfafa;
+}
+
+.HeadingBox {
+  margin-bottom: 18px;
+}
+
+.line {
+  position: relative;
+  height: 3px;
+  background: #c8c8c8;
+}
+
+.Title {
+  position: relative;
+  display: inline-block;
+  padding: 5px 13px;
+  background: #fff;
+  color: #ff6b82;
+  font-size: 20px;
+  font-weight: 600;
+  transform: translateY(-50%);
+}
+
+#cards {
+  display: grid;
+  gap: 12px;
+}
+
+.smallbox,
+.big {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  transition: all 0.28s ease;
+}
+
+.smallbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  border: 2px solid #c8c8c8;
+  background: #fff;
+  cursor: pointer;
+}
+
+.smallbox.hidden {
+  display: none;
+}
+
+.smallleft,
+.pricesection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.smallleft ul,
+.bigleft ul {
+  list-style: none;
+}
+
+.smallleft li,
+.bigleft li {
+  position: relative;
+  padding-left: 28px;
+}
+
+.smallleft li::before,
+.bigleft li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: url("./images/checked01.png") center/cover no-repeat;
+}
+
+.bigleft li::before {
+  background-image: url("./images/new-moon.png");
+}
+
+.checked h2 {
+  font-size: 14px;
+}
+
+.checked p {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #555;
+}
+
+.badget {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 4px 6px;
+  background: #ff6b82;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 2px;
+}
+
+.smallright {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.smallright h2 {
+  font-size: 14px;
+}
+
+.smallright p {
+  color: #c8c8c8;
+  text-decoration: line-through;
+  font-size: 10px;
+}
+
+.big {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 15px;
+  border: 2px solid transparent;
+  background: #fff;
+  pointer-events: none;
+  transform: translateY(-8px);
+}
+
+.big.active {
+  max-height: 500px;
+  opacity: 1;
+  padding: 15px;
+  border-color: #ff6b82;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.pricesection {
+  margin-bottom: 10px;
+}
+
+.mostpop {
+  position: relative;
+  float: right;
+  top: -25px;
+  right: -12px;
+  z-index: 2;
+  padding: 10px 15px;
+  background: #ff6b82;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0 0 5px 5px;
+}
+
+.mostpop::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: -10px;
+  width: 110%;
+  height: 20px;
+  background: #d7445b;
+  clip-path: polygon(5% 50%, 97% 47%, 100% 100%, 0 100%);
+}
+
+.colorsection {
+  margin-top: 10px;
+  margin-left: 16px;
+}
+
+.colorhead,
+.colorsecno {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.colname {
+  font-size: 10px;
+  color: #444;
+}
+
+.MainOption {
+  width: 100%;
+  max-width: 90px;
+  height: 26px;
+  padding: 0 8px;
+  border: 1px solid #c8c8c8;
+  background: #fff;
+}
+
+.FreeD-Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.Add-Cart {
+  margin-top: 18px;
+}
+
+.Add-Cart button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: #ff6b82;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.Add-Cart span {
+  font-size: 16px;
+}
+
+.LastText {
+  display: block;
+  margin-top: 8px;
+  text-align: right;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 22px 12px 12px;
+  }
+
+  .smallbox,
+  .big {
+    max-width: 100%;
+  }
+
+  .smallbox,
+  .pricesection,
+  .FreeD-Container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .smallright {
+    text-align: left;
+  }
+
+  .Title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .Title {
+    font-size: 16px;
+  }
+
+  .smallleft li,
+  .bigleft li {
+    padding-left: 24px;
+  }
+}
